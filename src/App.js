@@ -1,9 +1,13 @@
+import { Container, Content } from './styles';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      TEST
-    </div>
+    <Container>
+      <Content>
+        TEST
+      </Content>
+      
+    </Container>
   );
 }
 
