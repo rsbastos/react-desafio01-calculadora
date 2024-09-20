@@ -24,9 +24,21 @@ const App = () => {
       setFirstNumber(String(currentNumber));
       setCurrentNumber('0')
       setOperation('+')
-    } else {
+    } else {      
       const sum = Number(firstNumber) + Number(currentNumber);
       setCurrentNumber(String(sum))
+      setOperation('')
+    }
+  };
+
+  const handleSubtractionNumbers = () => {
+    if(firstNumber === '0'){
+      setFirstNumber(String(currentNumber));
+      setCurrentNumber('0')
+      setOperation('-')
+    } else {
+      const minus = Number(firstNumber) - Number(currentNumber);
+      setCurrentNumber(String(minus))
       setOperation('')
     }
   };
@@ -36,6 +48,9 @@ const App = () => {
       switch(operation){
         case '+':
           handleSumNumbers();
+          break;
+        case '-':
+          handleSubtractionNumbers();
           break;
         default: 
           break;
@@ -57,7 +72,7 @@ const App = () => {
           <Button label="7" onClick={() => handleAddNumber('7')}/>
           <Button label="8" onClick={() => handleAddNumber('8')}/>
           <Button label="9" onClick={() => handleAddNumber('9')}/>
-          <Button label="-" onClick={() => handleAddNumber('-')}/>
+          <Button label="-" onClick={handleSubtractionNumbers}/>
         </Row> 
         <Row>
           <Button label="4" onClick={() => handleAddNumber('4')}/>
