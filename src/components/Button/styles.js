@@ -2,8 +2,9 @@ import styled from 'styled-components';
 
 export const ButtonContainer = styled.button`
     padding: 20px;
-    border: 1px solid #CDCDCD;
-    background-color: #00AAF0;
+    margin: 2px;
+    border: 1px solid grey;
+    background-color: silver;
     color: #FFFFFF;
     font-size: 24px;
     font-weight: 700;
